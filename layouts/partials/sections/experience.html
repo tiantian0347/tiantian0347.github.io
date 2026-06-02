@@ -2,7 +2,7 @@
 <section id="experience" class="home-section" style="background-color: {{ .bg }};">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-3 section-heading"><h1>Experience</h1></div>
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Projects</h1></div>
       <div class="col-xs-12 col-md-9">
         {{ range $e.positions }}
         <div class="exp-item" style="margin-bottom: 1.4rem;">
@@ -13,11 +13,11 @@
         {{ end }}
 
         {{ with $e.projects }}
-        <h3 style="margin-top:2rem; color:#1f3a5f;">Projects</h3>
         {{ with .intro }}<p style="color:#7a7a7a; font-size:.95em;">{{ . }}</p>{{ end }}
         {{ range .items }}
         <div class="exp-item" style="margin-bottom: 1.1rem;">
           <p style="margin:0; font-weight:600;">{{ .title }}</p>
+          {{ with .type }}<p style="margin:.1rem 0; color:#666; font-size:.9em;">{{ . }}</p>{{ end }}
           <p style="margin:.1rem 0; color:#444; font-size:.92em;">Role: {{ .role }}</p>
           {{ with .detail }}<p style="margin:.1rem 0; color:#555; font-size:.9em;">{{ . | safeHTML }}</p>{{ end }}
         </div>

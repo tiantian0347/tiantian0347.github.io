@@ -65,28 +65,26 @@ news:
   - { date: "2025.05", text: "Presented FractureX at ICCES2025 in Changsha, China." }
 
 experience:
-  positions:
-    - role: "Postdoctoral Fellow"
-      org: "The Chinese University of Hong Kong, Shenzhen"
-      detail: "Advisor: Prof. Shihua Gong. Joint appointment at SRIBD and SICIAM (2025.09–2026.09), co-mentored by Prof. Chensong Zhang. Research focus: computational solid mechanics, finite element methods, preconditioners, and domain decomposition."
-    - role: "Ph.D. in Computational Mathematics"
-      org: "Xiangtan University (Integrated Master-Ph.D.)"
-      detail: "Advisor: Prof. Huayi Wei. Dissertation: <em>Efficient Numerical Simulation of Brittle Fracture</em>. Research focus: fracture simulation, computational solid mechanics, finite element methods, and open-source algorithm libraries."
   projects:
     items:
       - title: "Novel Structured ALE Solvers for Explicit Dynamics and Fluid-Structure Interaction"
+        type: "Guangdong Provincial Core Software Research Program: New Scenarios and New Technologies Project"
         role: "Research Participant"
         detail: "Contributed to algorithm design and implementation of ALE-based finite element solvers for explicit dynamics."
       - title: "Finite Element Module Development for Linear Elasticity (Phase II)"
+        type: "National Natural Science Foundation of China (NSFC) General Program"
         role: "Research Participant"
         detail: "Developed and tested finite element components for linear elasticity simulation workflows."
       - title: "Adaptive Mesh Optimization and Novel Finite Element Algorithms"
+        type: "Hunan Provincial Natural Science Foundation General Program"
         role: "Research Participant"
         detail: "Worked on adaptive meshing strategies and high-efficiency FEM algorithms for complex PDE systems."
       - title: "Finite Element Solvers for Linear Elasticity and Elastoplasticity"
+        type: "Guangdong Basic and Applied Basic Research Foundation General Program"
         role: "Research Participant"
         detail: "Implemented and validated computational modules for linear elasticity and elastoplastic mechanics."
       - title: "Efficient Numerical Simulation of Brittle Fracture"
+        type: "Graduate Innovation Project (Xiangtan University)"
         role: "PI"
         detail: "Led research on adaptive FEM and phase-field fracture simulation, including software realization in FractureX."
 
@@ -103,7 +101,7 @@ software:
       meta: "Core Contributor"
       detail: "Developed efficient numerical simulation modules in Python: asteroid thermal models, linear elasticity, truss/beam/frame structures, and adaptive finite element methods for phase-field fracture models."
       url: "https://github.com/weihuayi/fealpy"
-    - title: "fractureX — Brittle Fracture Simulation Package"
+    - title: "Fracturex — Brittle Fracture Simulation Package"
       meta: "Author"
       detail: "A finite element package for brittle fracture simulation built on FEALPy."
       url: "https://github.com/tiantian0347/fractureX"
