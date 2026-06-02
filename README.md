@@ -28,7 +28,7 @@ front matter 字段：`title` / `year`（排序用）/ `authors` / `venue` / `ur
 ## 本地预览
 ```bash
 hugo server -D
-# 打开 http://localhost:1313
+# 打开 http://localhost:1314
 ```
 
 ## 构建
