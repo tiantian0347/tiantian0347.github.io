@@ -1,0 +1,18 @@
+{{ $aw := hugo.Data.site.awards }}
+<section id="awards" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Awards</h1></div>
+      <div class="col-xs-12 col-md-9">
+        {{ range $aw }}
+        <div style="margin-bottom: 1.2rem;">
+          <h3 style="margin:0 0 .4rem; color:#1f3a5f;">{{ .group }}</h3>
+          <ul style="padding-left: 1.2rem;">
+            {{ range .items }}<li style="line-height:1.55;">{{ . | safeHTML }}</li>{{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

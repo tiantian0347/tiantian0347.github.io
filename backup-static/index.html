@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Tian Tian">
+  <meta name="description" content="Personal homepage of Tian Tian">
+  <title>Tian Tian's Homepage</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+
+  <style>
+    /* ===== Typography ===== */
+    body, p, li, td, th, .ul-interests li, .ul-edu .description {
+      font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Source Serif 4', 'Noto Sans SC', Georgia, serif; font-weight: 600; letter-spacing: -0.01em;
+    }
+    body { font-size: 16px; line-height: 1.65; color: #2c3e50; background: #fff; }
+    p { margin-bottom: 1rem; }
+    a { color: #1f3a5f; text-decoration: none; transition: color .15s ease, border-color .15s ease; }
+    a:hover, a:focus { color: #0d4a8f; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+    /* Section rhythm */
+    .home-section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+    #about { padding-top: 6.5rem; }
+    @media (max-width: 768px) { .home-section { padding-top: 2.5rem; padding-bottom: 2.5rem; } #about { padding-top: 5rem; } }
+    .section-heading h1 { font-size: 2.1rem; margin-top: 0; margin-bottom: .8rem; color: #1f3a5f; }
+    .section-heading p { color: #7a7a7a; font-size: .95em; }
+    section + section { border-top: 1px solid #f0f2f5; }
+
+    /* Profile portrait */
+    .portrait { width: 100%; padding-bottom: 100%; background-size: cover; background-position: center; border-radius: 12px; box-shadow: 0 4px 20px rgba(31,58,95,.12); }
+    .portrait-title h2 { font-size: 1.7rem; margin-top: 1rem; margin-bottom: .35rem; color: #1f3a5f; }
+    .portrait-title h3 { font-size: 1rem; color: #555; font-weight: 500; font-family: 'Inter', sans-serif; letter-spacing: 0; }
+    .portrait-title h3 a { color: #555; }
+
+    /* Network icons */
+    .network-icon { padding: 0; margin-top: 1rem; list-style: none; }
+    .network-icon li { display: inline-block; margin: 0 .35rem; }
+    .big-icon { font-size: 1.4rem; color: #1f3a5f; transition: color .15s, transform .15s; }
+    .network-icon a:hover .big-icon { color: #0d4a8f; transform: translateY(-2px); }
+    .network-icon a { border-bottom: none; }
+
+    /* Navbar */
+    .navbar-default { background: rgba(255,255,255,.96); backdrop-filter: saturate(180%) blur(8px); border-bottom: 1px solid #ececec; box-shadow: 0 1px 4px rgba(0,0,0,.03); }
+    .navbar-default .navbar-brand { color: #1f3a5f; font-weight: 700; font-size: 1.1rem; }
+    .navbar-default .navbar-nav > li > a { color: #444; font-weight: 500; font-size: .92rem; padding: 25px 12px; transition: color .15s; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li.active > a { color: #1f3a5f; background: transparent; }
+
+    /* Content headings */
+    .col-md-8 h1#biography { font-size: 1.9rem; color: #1f3a5f; margin-top: 0; margin-bottom: 1rem; border-bottom: 2px solid #1f3a5f; padding-bottom: .4rem; display: inline-block; }
+    .col-md-8 h3 { font-size: 1.15rem; color: #1f3a5f; margin-top: 1.5rem; margin-bottom: .6rem; }
+    .ul-interests, .ul-edu { padding-left: 1.2rem; }
+    .ul-edu { list-style: none; }
+    .ul-edu .course { margin-bottom: 0; font-weight: 500; }
+    .ul-edu .institution { color: #7a7a7a; font-size: .9em; }
+
+    /* Buttons */
+    .btn { border-radius: 6px; font-weight: 500; font-size: .9rem; transition: all .15s ease; }
+    .btn-primary { background: #1f3a5f; border-color: #1f3a5f; }
+    .btn-primary:hover, .btn-primary:focus { background: #0d4a8f; border-color: #0d4a8f; transform: translateY(-1px); }
+    .btn-xs { padding: 2px 8px; font-size: .78rem; }
+
+    /* Publications */
+    .pub-list-item { line-height: 1.55; padding: .15rem 0; }
+    .pub-list-item .pub-icon { color: #1f3a5f; margin-right: .5rem; opacity: .7; }
+    .pub-list-item em { color: #444; font-style: italic; }
+    .pub-list-item strong { color: #1f3a5f; }
+    .pub-list-item a { border-bottom: none; }
+
+    .news-list li { line-height: 1.55; }
+    html { scroll-behavior: smooth; }
+    body { scroll-padding-top: 80px; }
+    #contact { background: #f8f9fa; }
+    .site-footer { background: #f8f9fa; padding: 2rem 0; border-top: 1px solid #f0f2f5; color: #7a7a7a; font-size: .9em; }
+  </style>
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#about">Tian Tian</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a href="#about">Home</a></li>
+        <li class="nav-item"><a href="#research">Research</a></li>
+        <li class="nav-item"><a href="#news">News</a></li>
+        <li class="nav-item"><a href="#publications">Publications</a></li>
+        <li class="nav-item"><a href="#teaching">Teaching</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+        <li class="nav-item"><a href="files/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ============ ABOUT ============ -->
+<section id="about" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div id="profile">
+          <!-- 把头像放到 img/portrait.jpg，或修改下面的路径 -->
+          <div class="portrait" style="background-image: url('img/portrait.jpg');"></div>
+          <div class="portrait-title">
+            <h2>Tian Tian</h2>
+            <h3>Your Title · Position</h3>
+            <h3><a href="#" target="_blank" rel="noopener">Your Institution / Department</a></h3>
+          </div>
+          <ul class="network-icon">
+            <li><a href="mailto:your-email@example.com"><i class="fa fa-envelope big-icon"></i></a></li>
+            <li><a href="https://scholar.google.com/" target="_blank" rel="noopener"><i class="ai ai-google-scholar big-icon"></i></a></li>
+            <li><a href="https://github.com/tiantian0347" target="_blank" rel="noopener"><i class="fa fa-github big-icon"></i></a></li>
+            <li><a href="files/cv.pdf" target="_blank" rel="noopener"><i class="ai ai-cv big-icon"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <h1 id="biography">Biography</h1>
+        <p>这里写一两段个人简介。介绍你目前的身份、所在机构，以及主要研究/工作方向。<!-- TODO: 收到 CV 后填充 --></p>
+        <p>这里写教育与工作经历的概述，比如本科、硕士、博士分别在哪里取得，以及之前的工作/访问经历。</p>
+
+        <h3 style="margin-top: 1.5rem;">Highlights</h3>
+        <ul style="padding-left: 1.2rem;">
+          <li>亮点一（占位）</li>
+          <li>亮点二（占位）</li>
+          <li>亮点三（占位）</li>
+        </ul>
+
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>Interests</h3>
+            <ul class="ul-interests">
+              <li>研究兴趣一</li>
+              <li>研究兴趣二</li>
+              <li>研究兴趣三</li>
+            </ul>
+          </div>
+          <div class="col-sm-7">
+            <h3>Education</h3>
+            <ul class="ul-edu fa-ul">
+              <li><i class="fa-li fa fa-graduation-cap"></i><div class="description"><p class="course">PhD in 专业, 年份</p><p class="institution">学校名称</p></div></li>
+              <li><i class="fa-li fa fa-graduation-cap"></i><div class="description"><p class="course">BS in 专业, 年份</p><p class="institution">学校名称</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="home-section" style="background-color: #ffffff;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading">
+        <h1>Research</h1>
+        <p>用一两句话概括你的研究主题。</p>
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <div class="row" style="margin-bottom: 2rem;">
+          <div class="col-sm-4">
+            <img src="img/research1.jpg" alt="Research topic 1" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(31,58,95,.12);">
+            <p style="font-size: 0.75em; color: #888; margin-top: 0.4rem; text-align:center;">研究方向一 图注</p>
+          </div>
+          <div class="col-sm-8">
+            <h3 style="margin-top:0;">研究方向一标题</h3>
+            <p>这里描述第一个研究方向的内容与贡献。</p>
+            <p style="font-size: 0.9em; color: #555;">代表性工作：<a href="#" target="_blank" rel="noopener">论文链接</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="img/research2.jpg" alt="Research topic 2" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(31,58,95,.12);">
+            <p style="font-size: 0.75em; color: #888; margin-top: 0.4rem; text-align:center;">研究方向二 图注</p>
+          </div>
+          <div class="col-sm-8">
+            <h3 style="margin-top:0;">研究方向二标题</h3>
+            <p>这里描述第二个研究方向的内容与贡献。</p>
+            <p style="font-size: 0.9em; color: #555;">代表性工作：<a href="#" target="_blank" rel="noopener">论文链接</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section id="news" class="home-section" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>News</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <ul class="news-list" style="list-style:none; padding-left:0;">
+          <li style="padding: 0.6rem 0; border-bottom: 1px solid #e7e7e7;">
+            <span style="display:inline-block; min-width: 6.5rem; color:#7a7a7a; font-variant-numeric: tabular-nums;">2026.06</span>
+            一条动态（占位）。
+          </li>
+          <li style="padding: 0.6rem 0; border-bottom: 1px solid #e7e7e7;">
+            <span style="display:inline-block; min-width: 6.5rem; color:#7a7a7a; font-variant-numeric: tabular-nums;">2026.01</span>
+            另一条动态（占位）。
+          </li>
+          <li style="padding: 0.6rem 0;">
+            <span style="display:inline-block; min-width: 6.5rem; color:#7a7a7a; font-variant-numeric: tabular-nums;">2025.09</span>
+            再一条动态（占位）。
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="home-section" style="background-color: #ffffff;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Publications</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <div class="pub-list-item" style="margin-bottom: 1.2rem;">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <a href="#" target="_blank" rel="noopener"><strong>论文标题一</strong></a><br>
+          作者列表. <em>期刊/会议名称</em>, 年份.
+          <a class="btn btn-primary btn-xs" href="#" target="_blank" rel="noopener" style="margin-left:.4rem;">PDF</a>
+        </div>
+        <div class="pub-list-item" style="margin-bottom: 1.2rem;">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          <a href="#" target="_blank" rel="noopener"><strong>论文标题二</strong></a><br>
+          作者列表. <em>期刊/会议名称</em>, 年份.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section id="teaching" class="home-section" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Teaching</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <ul style="padding-left: 1.2rem;">
+          <li>课程名称（学期 / 角色）</li>
+          <li>课程名称（学期 / 角色）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Contact</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-envelope" aria-hidden="true"></i><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+          <li><i class="fa-li fa fa-building" aria-hidden="true"></i>办公室 / 通讯地址（占位）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Tian Tian.
+      <span class="pull-right"><a href="#top">Back to top <i class="fa fa-chevron-up"></i></a></span>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

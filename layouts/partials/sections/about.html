@@ -1,0 +1,47 @@
+{{ $d := hugo.Data.site }}
+{{ $p := $d.profile }}{{ $a := $d.about }}
+<section id="about" class="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <div id="profile">
+          <div class="portrait" style="background-image: url('{{ $p.portrait | relURL }}');"></div>
+          <div class="portrait-title">
+            <h2>{{ $p.name }}</h2>
+            <h3>{{ $p.title }}</h3>
+            <h3><a href="{{ $p.affiliation_url }}" target="_blank" rel="noopener">{{ $p.affiliation }}</a></h3>
+          </div>
+          <ul class="network-icon">
+            {{ range $p.links }}
+            <li><a href="{{ .url | relURL }}" target="_blank" rel="noopener"><i class="{{ .icon }} big-icon"></i></a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <h1 id="biography">Biography</h1>
+        {{ range $a.biography }}<p>{{ . | safeHTML }}</p>{{ end }}
+
+        {{ with $a.highlights }}
+        <h3 style="margin-top: 1.5rem;">Highlights</h3>
+        <ul style="padding-left: 1.2rem;">{{ range . }}<li>{{ . | safeHTML }}</li>{{ end }}</ul>
+        {{ end }}
+
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>Research Interests</h3>
+            <ul class="ul-interests">{{ range $a.interests }}<li>{{ . }}</li>{{ end }}</ul>
+          </div>
+          <div class="col-sm-7">
+            <h3>Education</h3>
+            <ul class="ul-edu fa-ul">
+              {{ range $a.education }}
+              <li><i class="fa-li fa fa-graduation-cap"></i><div class="description"><p class="course">{{ .course }}</p><p class="institution">{{ .institution }}</p></div></li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

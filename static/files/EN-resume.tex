@@ -1,0 +1,171 @@
+\documentclass{resume}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{array}
+\usepackage{url}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=*, topsep=5pt, partopsep=0pt, parsep=0pt, itemsep=4pt}
+
+\begin{document}
+
+% Personal Information Header
+\noindent
+% \begin{tabularx}{\linewidth}{@{}m{0.7\textwidth} m{0.25\textwidth}@{}}
+{
+    \Large \textbf{Tian Tian} \\
+    \vspace{0.2cm}
+    \large{
+        Ph.D. in Computational Mathematics | Postdoctoral Fellow \\
+        \vspace{0.1cm}
+        \normalsize{
+            Computational Solid Mechanics · Numerical PDEs · Finite Element Methods · Open-Source Algorithm Libraries
+        } \\
+        \vspace{0.3cm}
+        \normalsize{
+            \href{mailto:tiantian0347@126.com}{tiantian0347@126.com} \quad | \quad
+            \href{tel:15239455255}{+86 15239455255} \quad | \quad
+            \href{https://github.com/tiantian0347}{GitHub:tiantian0347}
+        } \\
+        \vspace{0.1cm}
+        Female \quad | \quad Han Chinese \quad | \quad CPC Member \quad | \quad Oct. 2000
+    }
+}
+% & 
+% {
+%     \includegraphics[width=2.5cm]{Tian.png}
+% }
+% \end{tabularx}
+
+\vspace{0.3cm}
+
+% Education
+\csection{Education}{\small
+    \begin{itemize}
+        \item \textbf{Ph.D. in Computational Mathematics \hfill Sep. 2019 -- Jun. 2025}\newline
+        Xiangtan University (Integrated Master-Ph.D. Program) \hfill Advisor: Prof. Huayi Wei\newline
+        {\footnotesize Research Focus: Numerical Simulation of Fracture, Computational Solid Mechanics, Open-Source Algorithm Libraries, Finite Element Methods \newline
+        Dissertation: \textit{Efficient Numerical Simulation of Brittle Fracture}}
+        
+        \item \textbf{B.Sc. in Statistics \hfill Sep. 2015 -- Jun. 2019}\newline
+        North China University of Water Resources and Electric Power \newline
+        {\footnotesize Core Courses: Mathematical Analysis, Advanced Algebra, Probability Theory, Mathematical Statistics, Multivariate Statistical Analysis, SPSS}
+    \end{itemize}
+}
+
+% Research Experience
+\csection{Research Experience}{\small
+    \begin{itemize}
+        \item \textbf{Postdoctoral Fellow \hfill Jul. 2025 -- Present}\newline
+        The Chinese University of Hong Kong, Shenzhen \hfill Advisor: Prof. Shihua Gong\newline
+        Research Focus: Computational Solid Mechanics, Finite Element Methods, Preconditioners, Domain Decomposition\newline
+        {\footnotesize Joint Appointment: Shenzhen Research Institute of Big Data \& Shenzhen International Center for Industrial and Applied Mathematics (Sep. 2025 -- Sep. 2026)}\newline
+        {\footnotesize Joint Advisor: Prof. Chensong Zhang}
+    \end{itemize}
+}
+
+% Publications
+\csection{Selected Publications}{\small
+    \begin{itemize}
+        \item \textbf{Tian Tian}, Chunyu Chen, Liang He, Huayi Wei*. Adaptive Finite Element Method for Phase Field Fracture Models Based on Recovery Error Estimates. \textit{Journal of Computational and Applied Mathematics}, 2026, 472. (CAS Q2, JCR Q1)
+        
+        \item \textbf{Tian Tian}, Huayi Wei*. Development of the FractureX Platform Based on FEALPy and Its Application in Brittle Fracture Simulation. \textit{The 31st International Conference on Computational \& Experimental Engineering and Sciences (ICCES2025)}, Changsha, China. (Conference Paper)
+        
+        \item Liang He, Huayi Wei*, \textbf{Tian Tian}. SOPTX: A Modular and Extensible Framework for Topology Optimization with Multi-Backend Support. \textit{Communications in Computational Physics}.Vol. 40 No. 2 (2026), pp. 525-572DOI:10.4208/cicp.OA-2025-0168. (中科院三区, JCR: Q1)% Jan. 21, 2026.
+        
+        \item Wen-ming He, Runchang Lin, \textbf{Tian Tian*}, Huayi Wei, Zhimin Zhang. Local convergence for \(C^0\) interior penalty approximation of biharmonic problems. \textit{Numerical Methods for Partial Differential Equations}. ISSN: 1098-2426. DOI: 10.1002/num.70102.(Alphabetical Order, CAS Q3, JCR Q2)
+        
+        \item Yangyang Zheng, Huayi Wei*, Yunqing Huang, Chunyu Chen, \textbf{Tian Tian}, Hanbin Liu, Wenbin Wang, Liang He. FEALPy v3: A Cross-platform Intelligent Numerical Simulation Engine. \textit{Communications in Computational Physics}. Accept. (CAS Q3, JCR Q1)
+        
+        \item \textbf{Tian Tian}, Chunyu Chen, Huayi Wei, Shihua Gong*. High-Order Interior Penalty Finite Element Methods for Fourth-Order Phase-Field Models in Fracture Analysis. To be submitted.
+        
+        \item Wen-ming He, Runchang Lin, \textbf{Tian Tian}, Huayi Wei, Zhimin Zhang*. Richardson extrapolation for C0 interior penalty finite element method for biharmonic problems. To be submitted. (Alphabetical Order)
+    \end{itemize}
+}
+
+% Software Copyrights \& Open-Source Contributions
+\csection{Software Copyrights \& Open-Source Contributions}{\small
+    \begin{itemize}
+        \item "Structural Mechanics Simulation Software" (2024SR3961048), \textbf{First Author}, Tian Tian, Huayi Wei, Liang He, Qin Liu
+        \item "Fracture Mechanics Simulation Software" (2025SR0532190), \textbf{First Author}, Tian Tian, Yangyang Zheng, Huayi Wei
+        \item Core Contributor to FEALPy: Open-Source Common Algorithm Library for Intelligent CAE Simulation \newline
+        \footnotesize Developed efficient numerical simulation modules in Python including asteroid thermal models, linear elasticity, truss structures, beam structures, frame structures, and adaptive finite element methods for phase-field fracture models \newline
+        \footnotesize Repository: \url{https://github.com/deepmodeling/fealpy}
+    \end{itemize}
+}
+
+% Project Experience
+\csection{Project Experience}{\small
+    \begin{itemize}
+        \item \textbf{Novel Structured Arbitrary Lagrangian-Eulerian Solvers for Explicit Dynamics of Maixi}\newline
+        National Major Special Project (ZHGC) \hfill Sep. 2025 -- Present\newline
+        Funding: 8.8613 Million RMB \quad PI: Prof. Jinchao Xu %(KAUST \& SRIBD)
+        \newline
+        Contributions:\newline
+        -- Established technical documentation framework; authored and validated Algorithm Manual, Efficiency Manual, and Accuracy Manual\newline
+        -- Coordinated R\&D progress across five sub-projects; participated in technical reviews and milestone deliverable assessments for a 20+ member team
+        
+        \item \textbf{Phase II: Finite Element Module Development for Linear Elasticity}\newline
+        China Construction Fifth Engineering Division Co., Ltd. \hfill Mar. 2023 -- Dec. 2023\newline
+        Project Type: Industry Collaboration (Lead Contributor)\newline
+        Team Members: Huayi Wei, Tian Tian, Chunyu Chen, Liang He, Qin Liu\newline
+        Contributions:\newline
+        -- Independently completed mathematical documentation, C++ programming, and result validation for truss modules\newline
+        -- Led team in developing beam modules (mathematical documentation, C++ implementation, validation)\newline
+        -- Authored and organized project acceptance and closing materials\newline
+        -- Organized project achievement evaluation meetings and strategic collaboration seminars
+        
+        \item \textbf{Adaptive Mesh Optimization and Novel Finite Element Algorithm Development}\newline
+        Huawei Technologies Co., Ltd. \hfill Jun. 2022 -- Jun. 2023\newline
+        Project Type: Industry Collaboration (Key Contributor, Funding: 629,330 RMB)\newline
+        Team Members: Huayi Wei (PI), Chunyu Chen, Tian Tian, Pengxiang Wang\newline
+        Contributions: Developed and optimized adaptive finite element algorithms; contributed to technical documentation
+        
+        \item \textbf{Finite Element Solver Development for Linear Elasticity and Elastoplasticity Models}\newline
+        China Construction Fifth Engineering Division Co., Ltd. \hfill Aug. 2021 -- Mar. 2023\newline
+        Project Type: Industry Collaboration (Key Contributor, Funding: 250,000 RMB)\newline
+        Team Members: Huayi Wei (PI), Xin Wang, Chunyu Chen, Tian Tian, Pengxiang Wang, Dong Wang\newline
+        Contributions: Participated in C++ programming and validation for linear elasticity modules; led project acceptance presentations
+        
+        \item \textbf{Efficient Numerical Simulation of Brittle Fracture Using Finite Element Methods}\newline
+        Xiangtan University Graduate Innovation Project \hfill Jan. 2022 -- Dec. 2023\newline
+        Project Type: University-Level Project (Principal Investigator)\newline
+        Contributions: Led project proposal, implementation, and completion; proposed adaptive finite element method based on recovery error estimates; developed numerical simulation code for phase-field fracture models
+
+        \item \textbf{Adaptive Virtual Element Methods on CVT Polygonal Meshes: Theory and Applications}\newline
+        Provincial Excellent Youth Project \hfill Dec. 2019 -- Dec. 2022\newline
+        Project Type: Government Funded Project (Contributor)\newline
+        Team Members: Huayi Wei (PI), Kai Jiang, Jian Huang, Ao Li, Jianggang Liu, Xin Wang, Handan Hu, Xin Gong, Chunyu Chen, Tian Tian\newline
+        Contributions: Participated in theoretical analysis and numerical implementation of virtual element methods; conducted numerical validations
+        
+        \item \textbf{Deep Learning Research and Applications Based on Neural Networks}\newline
+        North China University of Water Resources and Electric Power Key Innovation Project \hfill Jan. 2018 -- Jun. 2019\newline
+        Project Type: University-Level Project (Principal Investigator)\newline
+        Contributions: Led project proposal and implementation; studied neural network applications in deep learning; conducted image recognition experiments using CNNs
+    \end{itemize}
+}
+
+% Conferences \& Presentations
+\csection{Conferences \& Presentations}{\small
+    \begin{itemize}
+        \item 2025, The 31st International Conference on Computational \& Experimental Engineering and Sciences (ICCES2025), Changsha, China. Presentation: \textit{Development of the FractureX Platform Based on FEALPy and Its Application in Brittle Fracture Simulation}
+        \item 2025, The First Ph.D./Postdoc Exchange Meeting, The Chinese University of Hong Kong, Shenzhen. Presentation: \textit{FractureX: A Numerical Simulation Package for Brittle Fracture Based on FEALPy}
+        \item 2023, China Industrial and Applied Mathematics Annual Conference. Presentation: \textit{Adaptive Finite Element Methods for Continuum Damage and Fracture Models}
+        \item 2021, The 10th Finite Element Conference. Presentation: \textit{Efficient Numerical Simulation of 3D Asteroid Thermal Models}
+    \end{itemize}
+}
+
+% Honors \& Awards
+\csection{Honors \& Awards}{\small
+    \begin{itemize}
+        \item \textbf{Graduate Level}: Xiangtan University Special Scholarship (3 times), First-Class Scholarship (2 times), Second-Class Scholarship, Outstanding Graduate Student Leader (3 times), Outstanding Volunteer (2 times), Outstanding Graduate
+        
+        \item \textbf{Undergraduate Level}: National Mathematical Contest in Modeling (Henan Province First Prize), International Mathematical Contest in Modeling (Third Prize), Henan Province Outstanding Student Leader, Academic Excellence Scholarships (7 times), Information Technology Competition (First Prize), Outstanding Graduate, Outstanding Student Leader (3 times), Outstanding Student (2 times)
+    \end{itemize}
+}
+
+\end{document}

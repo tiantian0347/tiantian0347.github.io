@@ -1,0 +1,191 @@
+\documentclass{resume}
+% 替换开头的字体设置部分为：
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}  % 思源宋体，用于正文
+\setCJKsansfont{Noto Sans CJK SC}   % 思源黑体，用于标题
+\usepackage{array}
+\usepackage{url}
+
+% 全局使用无衬线字体作为标题，增加现代感
+\renewcommand{\familydefault}{\sfdefault}
+% 调整整体行间距
+\renewcommand{\baselinestretch}{1.5}
+
+% 调整列表环境间距
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=*, topsep=5pt, partopsep=0pt, parsep=0pt, itemsep=4pt}
+\usepackage{array}  % 添加array宏包支持
+
+\begin{document}
+
+% 个人信息头部
+\noindent
+\begin{tabularx}{\linewidth}{@{}m{0.7\textwidth} m{0.25\textwidth}@{}}
+{
+    \Large \textbf{田甜} \newline
+    \small{
+        数学博士 | 博士后研究员 \newline
+        \vspace{0.1cm}
+        计算固体力学 · 偏微分方程数值解 · 有限元方法 · 开源算法库开发 \newline
+        \vspace{0.2cm}
+        \clink{
+            \href{mailto:tiantian0347@126.com}{tiantian0347@126.com} \textbf{·}
+            \href{tel:15239455255}{15239455255} \textbf{·}
+            \href{https://github.com/tiantian0347}{GitHub:tiantian0347} %\textbf{·}
+            %\href{https://www.linkedin.com/in/yourusername}{LinkedIn}
+        } \newline
+        \vspace{0.1cm}
+        女 \textbf{·} 汉族 \textbf{·} 中共党员 \textbf{·} 2000.10
+    }
+}
+& 
+{
+    \includegraphics[width=2.5cm]{Tian.png} % 请确保路径正确
+}
+\end{tabularx}
+
+% 教育经历
+\csection{教育经历}{\small
+    \begin{itemize}
+        \item \textbf{博士 | 计算数学 \hfill 2019.09 -- 2025.06}\newline
+        湘潭大学 数学与计算科学学院（硕博连读） \hfill 导师：魏华祎教授\newline
+        {\footnotesize 研究方向：断裂数值模拟、计算固体力学、开源共性基础算法库、有限元方法 \newline
+        毕业论文：《脆性断裂的高效数值模拟及应用》}
+        
+        \item \textbf{学士 | 统计学 \hfill 2015.09 -- 2019.06}\newline
+        华北水利水电大学 \newline
+        {\footnotesize 主修课程：数学分析、高等代数、概率论、数理统计、多元统计分析、SPSS应用统计软件等}
+    \end{itemize}
+}
+
+
+\csection{科研经历}{\small
+    \begin{itemize}
+        \item \textbf{博士后研究员 \hfill 2025.07 -- 至今}\newline
+        香港中文大学（深圳） \hfill 
+        合作导师：龚世华 教授\newline
+        研究方向：计算固体力学、有限元方法、预条件子、区域分解\newline
+        {\footnotesize 联合培养：香港中文大学（深圳）、深圳市大数据研究院、深圳市国际工业与应用数学中心（2025.09 -- 2026.09）}\newline
+        {\footnotesize 联合培养导师：张晨松 教授}\newline
+    \end{itemize}
+}
+
+
+% 学术论文与著作
+\csection{代表性论著}{\small
+    \begin{itemize}
+        \item \textbf{Tian Tian}, Chunyu Chen, Liang He, Huayi Wei*. Adaptive Finite Element Method for Phase Field Fracture Models Based on Recovery Error Estimates. \textit{Journal of Computational and Applied Mathematics}, 2026, 472. DOI:10.1016/j.cam.2025.116732. (中科院二区, JCR: Q1)%20260215
+        
+        \item \textbf{Tian Tian}, Huayi Wei*. Development of the FractureX Platform Based on FEALPy and Its Application in Brittle Fracture Simulation. \textit{The 31st International Conference on Computational \& Experimental Engineering and Sciences (ICCES2025)}, Changsha, China. DOI: 10.32604/icces.2025.011175.(会议论文)%20250505-08
+        
+        \item Liang He, Huayi Wei*, \textbf{Tian Tian}. SOPTX: A Modular and Extensible Framework for Topology Optimization with Multi-Backend Support. \textit{Communications in Computational Physics}.Vol. 40 No. 2 (2026), pp. 525-572DOI:10.4208/cicp.OA-2025-0168. (中科院三区, JCR: Q1)%2026.08.
+        
+        \item Wen-ming He, Runchang Lin, \textbf{Tian Tian*}, Huayi Wei, Zhimin Zhang. Local convergence for \(C^0\) interior penalty approximation of biharmonic problems. \textit{Numerical Methods for Partial Differential Equations}. ISSN: 1098-2426. DOI: 10.1002/num.70102.(按姓氏排序中科院三区, JCR: Q2) %20260503
+        
+        \item Yangyang Zheng, Huayi Wei*, Yunqing Huang, Chunyu Chen, \textbf{Tian Tian}, Hanbin Liu, Wenbin Wang, Liang He. FEALPy v3: A Cross-platform Intelligent Numerical Simulation Engine.  \textit{Communications in Computational Physics}. Accept. %\textit{arXiv:2512.06632}. (中科院三区, JCR: Q1)%20260327
+        
+        \item \textbf{Tian Tian}, Chunyu Chen, Huayi Wei, Shihua Gong*. High-Order Interior Penalty Finite Element Methods for Fourth-Order Phase-Field Models in Fracture Analysis. 待投稿.
+        
+        \item Wen-ming He, Runchang Lin, \textbf{Tian Tian}, Huayi Wei, Zhimin Zhang*. Richardson extrapolation for C0 interior penalty finite element method for biharmonic problems. 待投稿. (按姓氏排序)
+    \end{itemize}
+}
+
+% 软件著作权
+\csection{软件著作权与开源贡献}{\small
+    \begin{itemize}
+        \item “建筑结构力学仿真计算软件”（2024SR3961048），\textbf{第一完成人}，田甜，魏华祎，何亮，刘琴
+        \item “断裂力学仿真计算软件”（2025SR0532190），\textbf{第一完成人}， 田甜，郑仰阳，魏华祎
+        \item 开源智能CAE仿真共性基础算法库 FEALPy 核心贡献者 \newline
+        \footnotesize 基于 Python 语言搭建了小行星热物理模型、线弹性、桁架结构、梁结构、框架结构及断裂相场模型的自适应有限元等高效数值模拟程序模块 \newline
+        \footnotesize 项目地址：\url{https://github.com/deepmodeling/fealpy}
+    \end{itemize}
+}
+
+
+\csection{项目经历}{\small
+    \begin{itemize}
+        \item \textbf{面向迈曦显式动力学的新型结构化任意拉格朗日欧拉求解器研发}\newline
+        铸魂工程项目（国家级重大专项）\hfill 2025.09 -- 至今\newline
+        经费：886.13万元 \quad 负责人：许进超 教授（KAUST \& SRIBD）\newline
+        %技术负责人：龚世华 教授\newline
+        本人贡献：\newline
+        -- 负责项目技术文档体系的构建与规范化，完成算法手册、效率手册、精度手册的撰写、整理与质量检验\newline
+        -- 协助统筹五个子课题的研发进度与技术对接，参与项目组的交付审核
+        
+        \item \textbf{线弹性第二阶段有限元模块开发}\newline
+        中国建筑第五工程局有限公司 \hfill 2023.03 -- 2023.12\newline
+        项目类型：横向项目（主要参与人）\newline
+        项目成员：魏华祎、田甜、陈春雨、何亮、刘琴\newline
+        本人贡献：\newline
+        -- 独立完成桁架模块的数学文档、程序设计（C++）、结果验证工作\newline
+        -- 带领团队成员完成梁模块的数学文档、程序设计（C++）、结果验证\newline
+        -- 负责项目验收、结项等材料的撰写与整理\newline
+        -- 组织“建筑结构力学分析计算内核开发项目成果鉴定会”及“中建五局工程创新研究院与湖南国家应用数学中心战略合作洽谈会”
+    
+        \item \textbf{网格自适应优化与新型有限元算法技术委托开发}\newline
+        华为技术有限公司 \hfill 2022.06 -- 2023.06\newline
+        项目类型：横向项目（主要参与人，经费62.933万元）\newline
+        项目成员：魏华祎（主持）、陈春雨、田甜、王鹏祥\newline
+        本人贡献：参与自适应有限元算法的开发与优化，负责部分技术文档撰写
+        
+        \item \textbf{线弹性与弹塑性模型的有限元求解模块开发}\newline
+        中国建筑第五工程局有限公司 \hfill 2021.08 -- 2023.03\newline
+        项目类型：横向项目（主要参与人，经费25万元）\newline
+        项目成员：魏华祎（主持）、王鑫、陈春雨、田甜、王鹏祥、王栋\newline
+        本人贡献：参与线弹性模块的程序设计（C++）及结果验证，负责项目验收总结汇报
+        
+        \item \textbf{脆性断裂有限元方法高效数值模拟}\newline
+        湘潭大学研究生创新项目 \hfill 2022.01 -- 2023.12\newline
+        项目类型：校级项目（主持）\newline
+        本人贡献：独立完成项目申报、实施与结题，提出基于恢复型误差估计的自适应有限元方法，开发断裂相场模型数值模拟程序
+
+        \item \textbf{基于CVT多边形网格的自适应虚单元方法理论及应用研究}\newline
+        省教育厅优秀青年项目 \hfill 2019.12 -- 2022.12\newline
+        项目类型：纵向项目（参与人）\newline
+        项目成员：魏华祎（主持）、蒋凯、黄健、李奥、刘江刚、王鑫、扈瀚丹、龚欣、陈春雨、田甜\newline
+        本人贡献：参与虚单元方法的理论分析与数值实现，完成相关数值算例的验证工作
+        
+        \item \textbf{基于神经网络的深度学习研究与应用}\newline
+        华北水利水电大学重点创新项目 \hfill 2018.01 -- 2019.06\newline
+        项目类型：校级项目（主持）\newline
+        本人贡献：完成项目申报与实施，研究神经网络在深度学习中的应用，使用卷积神经网络进行图像识别的预测，完成相关数值实验
+    \end{itemize}
+}
+
+
+
+% 学术会议与报告
+\csection{学术会议与报告}{\small
+    \begin{itemize}
+        \item 2025年，The 31st International Conference on Computational \& Experimental Engineering and Sciences (ICCES2025)，长沙，报告：《Development of the FractureX Platform Based on FEALPy and Its Application in Brittle Fracture Simulation》
+        \item 2025年，香港中文大学（深圳）第一届博士/博后交流会，报告：《FractureX：基于 FEALPy 的脆性断裂数值模拟软件包》
+        \item 2023年，中国工业与应用数学年会，报告：《连续体损伤断裂模型的自适应有限元方法》
+        \item 2021年，第十届有限元会议，报告：《三维小行星热物理模型的高效数值模拟》
+    \end{itemize}
+}
+
+% 荣誉奖项
+\csection{荣誉奖项}{\small
+    \begin{itemize}
+        \item \textbf{研究生期间}：湘潭大学特等奖学金3次、一等奖学金2次、二等奖学金、优秀研究生干部3次、志愿服务先进个人2次、优秀团员2次、优秀毕业生
+        
+        \item \textbf{本科期间}：全国大学生数学建模竞赛河南省一等奖、国际数学建模竞赛三等奖、河南省优秀学生干部、华北水利水电大学学业奖学金3次、优秀奖学金4次、信息技术大赛一等奖、职业生涯规划大赛二等奖、优秀毕业论文三等奖、三好学生标兵、优秀毕业生、优秀学生干部3次、三好学生2次、优秀团员2次、党委统战部先进个人2次、优秀团干部、社会实践先进个人、学生处先进个人、校友联络员
+    \end{itemize}
+}
+
+% 导师介绍（可选，保持简洁）
+% \csection{导师介绍}{\small
+%     \begin{itemize}
+%         \item \textbf{魏华祎}，湘潭大学数学与计算科学学院教授、博士生导师，湖南国家应用数学中心“智能仿真计算引擎与前沿共性基础算法创新中心”主任。研究方向为偏微分方程数值解、网格生成与优化、开源共性基础算法库，开发了FEALPy (Python) 和 OpenFinite (C++) 两款基础算法软件。
+%     \end{itemize}
+% }
+
+% 个人宣言或补充信息（可选）
+% \csection{个人补充信息}{\small
+%     \begin{itemize}
+%         \item 研究生期间主持湘潭大学研究生创新项目“脆性断裂有限元方法高效数值模拟”，并作为核心开发人员参与开源智能CAE仿真共性基础算法库 FEALPy 的开发工作。
+%         \item 本科期间主持华北水利水电大学重点创新项目“基于神经网络的深度学习研究与应用”。
+%     \end{itemize}
+% }
+
+\end{document}

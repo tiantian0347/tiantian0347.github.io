@@ -1,0 +1,27 @@
+baseURL = "https://tiantian0347.github.io/"
+defaultContentLanguage = "en"
+title = "Tian Tian"
+enableEmoji = true
+
+[languages.en]
+locale = "en-us"
+
+# Disable unneeded default outputs
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "section"]
+
+# Keep publications on homepage list only
+[[cascade]]
+[cascade.build]
+render = "never"
+list = "always"
+[cascade.target]
+path = "/publication/**"
+
+[markup.goldmark.renderer]
+unsafe = true   # allow HTML in publication summaries
+
+[params]
+author = "Tian Tian"
+description = "Personal homepage of Tian Tian"
+# Navbar order: matches sections in layouts/partials/sections
+sections = ["about", "research", "publications", "experience", "software", "talks", "awards", "news", "contact"]

@@ -1,0 +1,15 @@
+{{ $c := hugo.Data.site.contact }}
+<section id="contact" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Contact</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <ul class="fa-ul">
+          {{ range $c.items }}
+          <li><i class="fa-li {{ .icon }}" aria-hidden="true"></i>{{ .html | safeHTML }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

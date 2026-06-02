@@ -1,0 +1,134 @@
+# ===== Homepage content source =====
+# Update this file to refresh homepage content automatically.
+
+profile:
+  name: "Tian Tian (田甜)"
+  title: "Ph.D. in Computational Mathematics · Postdoctoral Fellow"
+  affiliation: "The Chinese University of Hong Kong, Shenzhen"
+  affiliation_url: "https://www.cuhk.edu.cn/en"
+  portrait: "img/portrait-white.png"
+  cv: "files/EN-resume.tex"
+  email: "tiantian0347@126.com"
+  links:
+    - { icon: "fa fa-envelope",       url: "mailto:tiantian0347@126.com" }
+    - { icon: "fa fa-github",         url: "https://github.com/tiantian0347" }
+    - { icon: "ai ai-cv",             url: "files/EN-resume.tex" }
+
+about:
+  biography:
+    - "I am currently a Postdoctoral Fellow at The Chinese University of Hong Kong, Shenzhen, working with Prof. Shihua Gong."
+    - "I also hold a joint appointment at the Shenzhen Research Institute of Big Data (SRIBD) and the Shenzhen International Center for Industrial and Applied Mathematics (SICIAM), with Prof. Chensong Zhang as a co-mentor."
+    - "I received my Ph.D. in Computational Mathematics from Xiangtan University (integrated Master-Ph.D. track), advised by Prof. Huayi Wei."
+  highlights:
+    - "Core contributor to <a href=\"https://github.com/weihuayi/fealpy\" target=\"_blank\" rel=\"noopener\">FEALPy</a>."
+    - "First author of two registered software copyrights in structural and fracture mechanics simulation."
+    - "Developer of FractureX, a brittle fracture simulation package built on FEALPy."
+  interests:
+    - "Computational Solid Mechanics"
+    - "Numerical Methods for PDEs"
+    - "Finite Element Methods"
+    - "Preconditioners & Domain Decomposition"
+    - "Open-Source Algorithm Libraries"
+  education:
+    - { course: "Ph.D. in Computational Mathematics", institution: "Xiangtan University (Integrated Master-Ph.D.) · Advisor: Prof. Huayi Wei" }
+    - { course: "B.Sc. in Statistics", institution: "North China University of Water Resources and Electric Power" }
+
+research:
+  intro: "Efficient numerical methods for solid mechanics and fracture, and the open-source software that makes them usable."
+  gallery_title: "Numerical Simulation of Brittle Fracture"
+  gallery:
+    - { image: "files/figures/model0.gif", title: "Benchmark Model I", caption: "Phase-field brittle fracture simulation: crack evolution process." }
+    - { image: "files/figures/model1.gif", title: "Benchmark Model II", caption: "Phase-field brittle fracture simulation: crack evolution process." }
+    - { image: "files/figures/model2.gif", title: "Benchmark Model III", caption: "Phase-field brittle fracture simulation: crack evolution process." }
+    - { image: "files/figures/model_Lshape.gif", title: "L-shaped Domain Benchmark", caption: "Phase-field brittle fracture simulation: crack evolution process." }
+  topics:
+    - title: "Numerical Simulation of Brittle Fracture"
+      body: "Adaptive finite element methods for phase-field fracture models based on recovery error estimates, and high-order interior penalty methods for fourth-order phase-field models. This line of work is realized in the FractureX platform built on FEALPy."
+      links:
+        - { text: "JCAM 2026", url: "https://doi.org/10.1016/j.cam.2025.116732" }
+        - { text: "ICCES2025", url: "https://doi.org/10.32604/icces.2025.011175" }
+    - title: "Finite Element Methods & Open-Source Libraries"
+      body: "C0 interior penalty methods for biharmonic problems, topology optimization frameworks, and cross-platform simulation engines. As a core contributor to FEALPy, I develop modules spanning linear elasticity, truss/beam/frame structures, and adaptive finite element methods."
+      links:
+        - { text: "FEALPy", url: "https://github.com/weihuayi/fealpy" }
+        - { text: "SOPTX (CiCP 2026)", url: "https://doi.org/10.4208/cicp.OA-2025-0168" }
+    - title: "Time-Harmonic Maxwell Solver: RAS-PML Domain Decomposition"
+      image: "img/research-maxwell-ras-pml.png"
+      caption: "RAS-PML domain decomposition for cavity scattering."
+      body: "I develop robust and scalable solvers for time-harmonic Maxwell equations based on Restricted Additive Schwarz (RAS) preconditioning with perfectly matched layer (PML) transmission treatment, targeting high-frequency cavity scattering and large-scale parallel simulation."
+
+news:
+  - { date: "2026.01", text: "Our paper on adaptive FEM for phase-field fracture models was published in the <em>Journal of Computational and Applied Mathematics</em>." }
+  - { date: "2025.09", text: "Began a joint appointment at the Shenzhen Research Institute of Big Data and the Shenzhen International Center for Industrial and Applied Mathematics." }
+  - { date: "2025.07", text: "Started as a postdoctoral fellow at the Chinese University of Hong Kong, Shenzhen, advised by Prof. Shihua Gong." }
+  - { date: "2025.06", text: "Received my Ph.D. in Computational Mathematics from Xiangtan University." }
+  - { date: "2025.05", text: "Presented FractureX at ICCES2025 in Changsha, China." }
+
+experience:
+  positions:
+    - role: "Postdoctoral Fellow"
+      org: "The Chinese University of Hong Kong, Shenzhen"
+      detail: "Advisor: Prof. Shihua Gong. Joint appointment at SRIBD and SICIAM (2025.09–2026.09), co-mentored by Prof. Chensong Zhang. Research focus: computational solid mechanics, finite element methods, preconditioners, and domain decomposition."
+    - role: "Ph.D. in Computational Mathematics"
+      org: "Xiangtan University (Integrated Master-Ph.D.)"
+      detail: "Advisor: Prof. Huayi Wei. Dissertation: <em>Efficient Numerical Simulation of Brittle Fracture</em>. Research focus: fracture simulation, computational solid mechanics, finite element methods, and open-source algorithm libraries."
+  projects:
+    items:
+      - title: "Novel Structured ALE Solvers for Explicit Dynamics and Fluid-Structure Interaction"
+        role: "Research Participant"
+        detail: "Contributed to algorithm design and implementation of ALE-based finite element solvers for explicit dynamics."
+      - title: "Finite Element Module Development for Linear Elasticity (Phase II)"
+        role: "Research Participant"
+        detail: "Developed and tested finite element components for linear elasticity simulation workflows."
+      - title: "Adaptive Mesh Optimization and Novel Finite Element Algorithms"
+        role: "Research Participant"
+        detail: "Worked on adaptive meshing strategies and high-efficiency FEM algorithms for complex PDE systems."
+      - title: "Finite Element Solvers for Linear Elasticity and Elastoplasticity"
+        role: "Research Participant"
+        detail: "Implemented and validated computational modules for linear elasticity and elastoplastic mechanics."
+      - title: "Efficient Numerical Simulation of Brittle Fracture"
+        role: "PI"
+        detail: "Led research on adaptive FEM and phase-field fracture simulation, including software realization in FractureX."
+
+software:
+  intro: "Registered software copyrights and open-source contributions."
+  items:
+    - title: "Structural Mechanics Simulation Software"
+      meta: "Software Copyright 2024SR3961048 · First Author"
+      detail: "Tian Tian, Huayi Wei, Liang He, Qin Liu."
+    - title: "Fracture Mechanics Simulation Software"
+      meta: "Software Copyright 2025SR0532190 · First Author"
+      detail: "Tian Tian, Yangyang Zheng, Huayi Wei."
+    - title: "FEALPy — Open-Source Algorithm Library for Intelligent CAE Simulation"
+      meta: "Core Contributor"
+      detail: "Developed efficient numerical simulation modules in Python: asteroid thermal models, linear elasticity, truss/beam/frame structures, and adaptive finite element methods for phase-field fracture models."
+      url: "https://github.com/weihuayi/fealpy"
+    - title: "fractureX — Brittle Fracture Simulation Package"
+      meta: "Author"
+      detail: "A finite element package for brittle fracture simulation built on FEALPy."
+      url: "https://github.com/tiantian0347/fractureX"
+
+talks:
+  - { date: "2025", venue: "31st Intl. Conf. on Computational & Experimental Engineering and Sciences (ICCES2025), Changsha", title: "Development of the FractureX Platform Based on FEALPy and Its Application in Brittle Fracture Simulation" }
+  - { date: "2025", venue: "1st Ph.D./Postdoc Exchange Meeting, CUHK-Shenzhen", title: "FractureX: A Numerical Simulation Package for Brittle Fracture Based on FEALPy" }
+  - { date: "2023", venue: "China Industrial and Applied Mathematics Annual Conference", title: "Adaptive Finite Element Methods for Continuum Damage and Fracture Models" }
+  - { date: "2021", venue: "10th Finite Element Conference", title: "Efficient Numerical Simulation of 3D Asteroid Thermal Models" }
+
+awards:
+  - group: "Graduate (Xiangtan University)"
+    items:
+      - "Special Scholarship (×3), First-Class Scholarship (×2), Second-Class Scholarship"
+      - "Outstanding Graduate Student Leader (×3), Outstanding Volunteer (×2), Outstanding Graduate"
+  - group: "Undergraduate"
+    items:
+      - "National Mathematical Contest in Modeling — Henan Province First Prize"
+      - "International Mathematical Contest in Modeling — Third Prize (Honorable Mention)"
+      - "Henan Province Outstanding Student Leader · Academic Excellence Scholarships (×7)"
+      - "Information Technology Competition First Prize · Outstanding Graduate"
+
+contact:
+  items:
+    - { icon: "fa fa-envelope", html: '<a href="mailto:tiantian0347@126.com">tiantian0347@126.com</a>' }
+    - { icon: "fa fa-github", html: '<a href="https://github.com/tiantian0347" target="_blank" rel="noopener">github.com/tiantian0347</a>' }
+    - { icon: "fa fa-building", html: "The Chinese University of Hong Kong, Shenzhen" }
+    - { icon: "fa fa-file-text-o", html: 'CV: <a href="files/EN-resume.tex" target="_blank" rel="noopener">English Version</a>' }

@@ -1,0 +1,46 @@
+{{ $r := hugo.Data.site.research }}
+<section id="research" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading">
+        <h1>Research</h1>
+        {{ with $r.intro }}<p>{{ . }}</p>{{ end }}
+      </div>
+      <div class="col-xs-12 col-md-9">
+        {{ range $i, $t := $r.topics }}
+        <div class="row"{{ if ne $i (sub (len $r.topics) 1) }} style="margin-bottom: 2rem;"{{ end }}>
+          <div class="col-sm-12">
+            <h3 style="margin-top:0;">{{ $t.title }}</h3>
+            <p>{{ $t.body | safeHTML }}</p>
+            {{ with $t.links }}
+            <p style="font-size: 0.9em; color: #555;">Representative work:
+              {{ range $j, $l := . }}{{ if $j }} &middot; {{ end }}<a href="{{ $l.url }}" target="_blank" rel="noopener">{{ $l.text }}</a>{{ end }}
+            </p>
+            {{ end }}
+            {{ with $t.image }}
+            <div style="margin-top:1rem; max-width: 620px;">
+              <img src="{{ . | relURL }}" alt="{{ $t.title }}" style="width:100%; height:auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(31,58,95,.12);">
+              {{ with $t.caption }}<p style="font-size: 0.82em; color: #777; margin-top: 0.4rem;">{{ . }}</p>{{ end }}
+            </div>
+            {{ end }}
+            {{ if and (eq $i 0) $r.gallery }}
+            <h4 style="margin-top:1.2rem; margin-bottom:.8rem; color:#1f3a5f;">{{ $r.gallery_title | default "Fracture Simulation Gallery" }}</h4>
+            <div class="row" style="margin-bottom: 1rem;">
+              {{ range $r.gallery }}
+              <div class="col-xs-12 col-sm-6" style="margin-bottom: 1rem;">
+                <div style="max-width: 340px; margin: 0 auto; border:1px solid #e7e7e7; border-radius: 6px; padding: .6rem; background:#fff;">
+                  <img src="{{ .image | relURL }}" alt="{{ .title }}" style="width:100%; height:auto; border-radius: 4px;">
+                  <p style="margin:.5rem 0 0; font-weight:600; font-size:.92em;">{{ .title }}</p>
+                  {{ with .caption }}<p style="margin:.1rem 0 0; color:#777; font-size:.82em;">{{ . }}</p>{{ end }}
+                </div>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

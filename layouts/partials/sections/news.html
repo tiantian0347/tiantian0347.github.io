@@ -1,0 +1,18 @@
+{{ $news := hugo.Data.site.news }}
+<section id="news" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>News</h1></div>
+      <div class="col-xs-12 col-md-9">
+        <ul class="news-list" style="list-style:none; padding-left:0;">
+          {{ range $i, $n := $news }}
+          <li style="padding: 0.6rem 0;{{ if ne $i (sub (len $news) 1) }} border-bottom: 1px solid #e7e7e7;{{ end }}">
+            <span style="display:inline-block; min-width: 6.5rem; color:#7a7a7a; font-variant-numeric: tabular-nums;">{{ $n.date }}</span>
+            {{ $n.text | safeHTML }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

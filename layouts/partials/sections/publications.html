@@ -1,0 +1,29 @@
+{{ $ctx := .ctx }}
+{{ $pubs := where $ctx.Site.RegularPages "Section" "publication" }}
+{{ $pubs = sort $pubs "Params.weight" }}
+{{ $pubs = sort $pubs "Params.year" "desc" }}
+<section id="publications" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading"><h1>Publications</h1></div>
+      <div class="col-xs-12 col-md-9">
+        {{ range $pubs }}
+        <div class="pub-list-item" style="margin-bottom: 1.2rem;">
+          <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+          {{ if .Params.link }}<a href="{{ .Params.link }}" target="_blank" rel="noopener"><strong>{{ .Title }}</strong></a>{{ else }}<strong>{{ .Title }}</strong>{{ end }}<br>
+          {{ with .Params.authors }}
+            {{ range $i, $a := . }}{{ if $i }}, {{ end }}{{ if in $a "Tian Tian" }}<span style="text-decoration:underline;">{{ $a }}</span>{{ else }}{{ $a }}{{ end }}{{ end }}.
+          {{ end }}
+          {{ with .Params.venue }} <em>{{ . }}</em>{{ if $.Params.year }}, {{ $.Params.year }}{{ end }}.{{ end }}
+          {{ with .Params.note }} <span style="color:#7a7a7a; font-size:.88em;">({{ . }})</span>{{ end }}
+          {{ range .Params.buttons }}
+          <a class="btn btn-primary btn-xs" href="{{ .url | relURL }}" target="_blank" rel="noopener" style="margin-left:.4rem;">{{ .text }}</a>
+          {{ end }}
+        </div>
+        {{ else }}
+        <p style="color:#7a7a7a;">No publications yet. Add a new markdown file under <code>content/publication/</code> and it will appear here automatically.</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

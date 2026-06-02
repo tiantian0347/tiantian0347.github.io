@@ -1,0 +1,8 @@
+{{ define "main" }}
+{{ $bg := dict "about" "#ffffff" "research" "#ffffff" "publications" "#ffffff" "experience" "#f8f9fa" "software" "#ffffff" "talks" "#f8f9fa" "awards" "#ffffff" "news" "#f8f9fa" "contact" "#ffffff" }}
+{{ range .Site.Params.sections }}
+  {{ if templates.Exists (printf "partials/sections/%s.html" .) }}
+    {{ partial (printf "sections/%s.html" .) (dict "ctx" $ "bg" (index $bg .)) }}
+  {{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ $s := hugo.Data.site.software }}
+<section id="software" class="home-section" style="background-color: {{ .bg }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 section-heading">
+        <h1>Software & Open Source</h1>
+        {{ with $s.intro }}<p>{{ . }}</p>{{ end }}
+      </div>
+      <div class="col-xs-12 col-md-9">
+        {{ range $s.items }}
+        <div class="pub-list-item" style="margin-bottom: 1.1rem;">
+          <i class="fa fa-cube pub-icon" aria-hidden="true"></i>
+          {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener"><strong>{{ .title }}</strong></a>{{ else }}<strong>{{ .title }}</strong>{{ end }}<br>
+          {{ with .meta }}<span style="color:#7a7a7a; font-size:.88em;">{{ . }}</span><br>{{ end }}
+          {{ with .detail }}<span style="color:#555;">{{ . | safeHTML }}</span>{{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
